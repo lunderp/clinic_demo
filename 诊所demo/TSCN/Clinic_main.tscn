@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dajr0osvs6l0s"]
+
+[ext_resource type="Texture2D" uid="uid://bx8u1fuk7wqmc" path="res://AI参考/7d0d551d-8a37-4909-aee0-5f961661aca8.png" id="1_p16gl"]
+
+[node name="Node2D" type="Node2D" unique_id=1841435114]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=172436584]
+offset_right = 768.0
+offset_bottom = 1024.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=1324614135]
+position = Vector2(644, 365)
+scale = Vector2(1.000651, 0.62280273)
+texture = ExtResource("1_p16gl")

@@ -15,6 +15,16 @@ run/main_scene="uid://bhku201vrqd5f"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneManager="*uid://404g6ccvoken"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

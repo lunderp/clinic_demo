@@ -1,22 +1,53 @@
 [gd_scene format=3 uid="uid://bhku201vrqd5f"]
 
-[ext_resource type="Texture2D" uid="uid://cpe5im0nmbxxt" path="res://Resources/Humble Gift - Paper UI System v1.1/Sprites/Book Desk/2.png" id="1_d8t2o"]
-[ext_resource type="PackedScene" uid="uid://dj0xmsoacs2st" path="res://TSCN/立绘原型.tscn" id="2_0mh87"]
+[ext_resource type="Script" uid="uid://c11rok2oylm0r" path="res://scripts/main_scence.gd" id="1_0mh87"]
+[ext_resource type="Texture2D" uid="uid://cufuy6xajd2et" path="res://Resources/6faf566b-9dd4-4697-a37d-1c7bc03cea3a.png" id="1_d8t2o"]
 
 [node name="Node2D" type="Node2D" unique_id=2139448159]
+script = ExtResource("1_0mh87")
 
-[node name="background" type="Sprite2D" parent="." unique_id=1464559706]
-position = Vector2(575, 323)
-scale = Vector2(1.4947916, 1.1464286)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2121284636]
+offset_left = 889.0
+offset_top = 502.0
+offset_right = 929.0
+offset_bottom = 542.0
+
+[node name="背景" type="Sprite2D" parent="TextureRect" unique_id=1318272291]
+position = Vector2(-248.75, -142.5)
+scale = Vector2(0.72003376, 0.71613544)
 texture = ExtResource("1_d8t2o")
 
-[node name="Label" type="Label" parent="." unique_id=661625500]
-offset_left = 188.0
-offset_top = 92.0
-offset_right = 284.0
-offset_bottom = 141.0
-text = "Hello Godot!
+[node name="Node2D" type="Node2D" parent="." unique_id=549003816]
+position = Vector2(1462, 419)
+
+[node name="option" type="Button" parent="Node2D" unique_id=1144287686]
+offset_left = -561.0
+offset_top = -51.0
+offset_right = -298.0
+offset_bottom = 19.0
+text = "设置
 "
 
-[node name="CharacterBody2D" parent="Label" unique_id=1585924656 instance=ExtResource("2_0mh87")]
-position = Vector2(-173, 325)
+[node name="start" type="Button" parent="Node2D" unique_id=1735074225]
+offset_left = -560.0
+offset_top = -145.0
+offset_right = -297.0
+offset_bottom = -75.0
+text = "开始游戏"
+
+[node name="goon" type="Button" parent="Node2D" unique_id=1589290550]
+offset_left = -552.0
+offset_top = 54.0
+offset_right = -289.0
+offset_bottom = 124.0
+text = "继续游戏"
+
+[node name="exit" type="Button" parent="Node2D" unique_id=310923007]
+offset_left = -554.0
+offset_top = 153.0
+offset_right = -291.0
+offset_bottom = 223.0
+text = "退出
+"
+
+[connection signal="pressed" from="Node2D/start" to="." method="_on_start_pressed"]

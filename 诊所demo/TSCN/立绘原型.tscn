@@ -1,15 +1,8 @@
 [gd_scene format=3 uid="uid://dj0xmsoacs2st"]
 
-[ext_resource type="Texture2D" uid="uid://d0hqlku728xr" path="res://Resources/另一种版本.png" id="1_0nj7f"]
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xr6ug"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1585924656]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1380445489]
-position = Vector2(70.87504, 100)
-scale = Vector2(0.13546064, 0.15488721)
-texture = ExtResource("1_0nj7f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1226271694]
 position = Vector2(19, 32)
