@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	SceneManager.changjingjiazaiguodu("res://TSCN/Clinic_main.tscn")
-	pass # 这里应该写跳转场景
+	SceneManager.changjingjiazaiguodu("res://TSCN/Clinic_main.tscn")# 这里应该写跳转场景
+	pass 
