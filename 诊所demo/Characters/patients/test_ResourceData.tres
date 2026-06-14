@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="PatientData" format=3 uid="uid://y2jqigl06dkg"]
-
-[ext_resource type="Script" uid="uid://1i4kxaxocn1w" path="res://scripts/patients_data.gd" id="1_15jhc"]
-
-[resource]
-script = ExtResource("1_15jhc")
-metadata/_custom_type_script = "uid://1i4kxaxocn1w"

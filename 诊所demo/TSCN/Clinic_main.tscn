@@ -1,14 +1,57 @@
 [gd_scene format=3 uid="uid://dajr0osvs6l0s"]
 
-[ext_resource type="Texture2D" uid="uid://bx8u1fuk7wqmc" path="res://AI参考/7d0d551d-8a37-4909-aee0-5f961661aca8.png" id="1_p16gl"]
+[ext_resource type="Texture2D" uid="uid://clkpnireteajj" path="res://Resources/ChatGPT Image 2026年6月12日 15_00_46.png" id="1_p16gl"]
+[ext_resource type="Script" uid="uid://bm6glpgfw3li" path="res://scripts/dialogue_controller.gd" id="2_gu3vi"]
+[ext_resource type="Resource" uid="uid://dpga3cs5amfkx" path="res://Characters/patients/patient1.tres" id="3_s53pl"]
 
 [node name="Node2D" type="Node2D" unique_id=1841435114]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=172436584]
-offset_right = 768.0
-offset_bottom = 1024.0
-
-[node name="Sprite2D" type="Sprite2D" parent="TextureRect" unique_id=1324614135]
-position = Vector2(644, 365)
-scale = Vector2(1.000651, 0.62280273)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_right = 1282.0
+offset_bottom = 723.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_p16gl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogueController" type="Control" parent="." unique_id=136486738]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_gu3vi")
+patient_data = ExtResource("3_s53pl")
+
+[node name="SpeakerLabel" type="Label" parent="DialogueController" unique_id=506356003]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 490.0
+offset_right = 122.0
+offset_bottom = 513.0
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueController" unique_id=983258222]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 573.0
+offset_right = 491.0
+offset_bottom = 707.0
+
+[node name="NextButton" type="Button" parent="DialogueController" unique_id=2120990658]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 228.0
+offset_right = 323.0
+offset_bottom = 288.0
+text = "next_button"
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueController" unique_id=1476120415]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 215.0
+offset_right = 538.0
+offset_bottom = 342.0

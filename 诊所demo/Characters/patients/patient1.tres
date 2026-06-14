@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PatientData" format=3 uid="uid://dpga3cs5amfkx"]
+
+[ext_resource type="Script" uid="uid://dcanymt1yke8v" path="res://scripts/data/dialogue_node.gd" id="1_kwfgc"]
+[ext_resource type="Script" uid="uid://dbyx4ofavnfm7" path="res://scripts/data/dialogue_choice.gd" id="2_1pak4"]
+[ext_resource type="Texture2D" uid="uid://yhh1ayercdlg" path="res://Characters/patients/6faf566b-9dd4-4697-a37d-1c7bc03cea3a.png" id="2_aypro"]
+[ext_resource type="Script" uid="uid://dpm2n4sgblyhf" path="res://scripts/data/patients_data.gd" id="3_1pak4"]
+[ext_resource type="Script" uid="uid://demmpaqfsyg32" path="res://scripts/data/dialogue_line.gd" id="3_crfsk"]
+
+[sub_resource type="Resource" id="Resource_pop11"]
+script = ExtResource("2_1pak4")
+choice_text = "选项A_gotoNode"
+target_node_id = "NODE_2"
+metadata/_custom_type_script = "uid://dbyx4ofavnfm7"
+
+[sub_resource type="Resource" id="Resource_lv3ju"]
+script = ExtResource("3_crfsk")
+text = "这是第一句话，表情是normal，id是patient"
+metadata/_custom_type_script = "uid://demmpaqfsyg32"
+
+[sub_resource type="Resource" id="Resource_u8ips"]
+script = ExtResource("3_crfsk")
+text = "这是节点1的第二句话"
+metadata/_custom_type_script = "uid://demmpaqfsyg32"
+
+[sub_resource type="Resource" id="Resource_oebjq"]
+script = ExtResource("3_crfsk")
+speaker_id = "patient1"
+text = "这是节点1的第三局话，悄悄更改了speakerID"
+metadata/_custom_type_script = "uid://demmpaqfsyg32"
+
+[sub_resource type="Resource" id="Resource_ypjqy"]
+script = ExtResource("1_kwfgc")
+lines = Array[ExtResource("3_crfsk")]([SubResource("Resource_lv3ju"), SubResource("Resource_u8ips"), SubResource("Resource_oebjq")])
+choices = Array[ExtResource("2_1pak4")]([SubResource("Resource_pop11")])
+metadata/_custom_type_script = "uid://dcanymt1yke8v"
+
+[resource]
+script = ExtResource("3_1pak4")
+patient_id = "Patient1"
+patient_name = "Patient1"
+age = 22
+portrait = ExtResource("2_aypro")
+dialogue_nodes = Array[ExtResource("1_kwfgc")]([SubResource("Resource_ypjqy")])
+money_change = 10
+stress_change = 20
+record_text = "it's a test that have no scence"
+metadata/_custom_type_script = "uid://dpm2n4sgblyhf"
